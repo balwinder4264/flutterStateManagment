@@ -53,7 +53,7 @@ class Products with ChangeNotifier {
   Future<void> addProduct(Product product) async {
     const url =
         "https://shoppingappbackend-default-rtdb.firebaseio.com/products.json";
-    await http
+    return http
         .post(url,
             body: json.encode({
               'title': product.title,
